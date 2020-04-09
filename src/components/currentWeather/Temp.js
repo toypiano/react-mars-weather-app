@@ -1,15 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default function Temp({ currentTempHigh, currentTempLow, tempUnit }) {
+const StyledTemp = styled.div`
+  --border: solid 0.25em var(--cl-accent-dark);
+  grid-column: 2 / 3;
+  border-left: var(--border);
+  border-right: var(--border);
+  padding: 0 2em;
+`;
+export default function Temp({ maxTemp, minTemp }) {
   return (
-    <div>
-      <h2>Temperature</h2>
-      <p>
-        High: {currentTempHigh}°{tempUnit}
-      </p>
-      <p>
-        Low: {currentTempLow}°{tempUnit}
-      </p>
-    </div>
+    <StyledTemp>
+      <h2 className="section-title">Temperature</h2>
+      <p className="current-weather__data">High: {maxTemp}</p>
+      <p className="current-weather__data">Low: {minTemp}</p>
+    </StyledTemp>
   );
 }

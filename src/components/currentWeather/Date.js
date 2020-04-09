@@ -1,10 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default function Date({ sol, currentDate }) {
+const StyledDate = styled.div`
+  grid-column: 1 / 2;
+  h2 {
+    font-size: var(--fz-xl);
+    margin-bottom: 0em;
+  }
+  p {
+    font-size: var(--fz-h2);
+    color: var(--cl-gray);
+    margin: 0;
+    font-weight: var(--fw-light);
+  }
+`;
+
+export default function Date({ sol, date }) {
   return (
-    <div>
-      <h2>Sol {sol}</h2>
-      <p>{currentDate}</p>
-    </div>
+    <StyledDate>
+      <h2 className="section-title">Sol {sol}</h2>
+      <p>{date}</p>
+    </StyledDate>
   );
 }
