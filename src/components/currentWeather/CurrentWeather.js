@@ -13,6 +13,12 @@ const StyledMain = styled.main`
   /* space on top for Unit toggle */
   padding: 6em 2em 2em;
   margin: 0;
+  @media (min-width: 600px) {
+    margin: 1em;
+    row-gap: 2em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
 
   @media (min-width: 900px) {
     display: grid;

@@ -19,19 +19,20 @@ const StyledWind = styled.div`
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    .wind__degree {
-      background: var(--cl-accent-dark);
-      --size: 0.75rem;
-      width: var(--size);
-      height: calc(var(--size) * 3);
-      --degree: ${(props) => props.degree + 'deg'};
-      transform: translateY(-50%) rotate(var(--degree));
-      transform-origin: bottom center; /*rotate clock needle around its bottom center (instead of its middle center) */
-      clip-path: polygon(50% 0, 0 100%, 100% 100%);
-      transition: transform 350ms linear;
-    }
     display: grid;
     place-items: center;
+  }
+  /* styled-component bug: custom property won't override if nested more than 2 levels */
+  .wind__degree {
+    background: var(--cl-accent-dark);
+    --size: 0.75rem;
+    width: var(--size);
+    height: calc(var(--size) * 3);
+    --degree: ${(props) => props.degree + 'deg'};
+    transform: translateY(-50%) rotate(var(--degree));
+    transform-origin: bottom center; /*rotate clock needle around its bottom center (instead of its middle center) */
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transition: transform 350ms linear;
   }
   @media (min-width: 900px) {
     grid-column: 3 / 4;
@@ -42,6 +43,8 @@ const StyledWind = styled.div`
     .wind__direction {
       grid-row: 1 / span 2;
       --size: 6rem;
+      /* don't forget to put it back! */
+      grid-column: 1 / 2;
     }
     .wind__degree {
       --size: 1rem;
