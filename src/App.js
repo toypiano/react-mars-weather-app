@@ -3,7 +3,6 @@ import { useAppDispatch, useAppState } from './store';
 import { formatDate, formatTemp, formatSpeed } from './utils/formatters';
 import { actionTypes } from './store/actions';
 import CurrentWeather from './components/currentWeather/CurrentWeather';
-import PreviousWeather from './components/previousWeather/PreviousWeather';
 import weatherData from './store/weatherData.json';
 
 // const API_KEY = 'DEMO_KEY';
@@ -51,7 +50,6 @@ function App() {
   return (
     <div className="App">
       <CurrentWeather weather={selectedFormattedWeather} />
-      <PreviousWeather weathers={formattedWeathers} />
     </div>
   );
 }
