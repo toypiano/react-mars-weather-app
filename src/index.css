@@ -14,10 +14,10 @@ html {
   --fw-normal: 400;
   --fw-semi: 500;
   --fw-bold: 700;
-  --fz-h1: 1.5rem;
-  --fz-h2: 2.25rem;
+  --fz-h1: 1.25rem;
+  --fz-h2: 2.75rem;
   --fz-body: 1rem;
-  --fz-xl: 4.4rem;
+  --fz-xl: 4rem;
   --cl-light: #fff;
   --cl-gray: #989898;
   --cl-dark: #444;
@@ -84,6 +84,12 @@ a:hover {
 }
 
 @media (min-width: 900px) {
+  :root {
+    --fz-h1: 1.5rem;
+    --fz-h2: 2.25rem;
+    --fz-body: 1rem;
+    --fz-xl: 4.4rem;
+  }
   body {
     height: 100vh;
     overflow: hidden;
