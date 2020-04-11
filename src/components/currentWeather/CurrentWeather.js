@@ -15,9 +15,9 @@ const StyledMain = styled.main`
   margin: 0;
   @media (min-width: 600px) {
     margin: 1em;
-    row-gap: 2em;
+    gap: 2em;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: 900px) {

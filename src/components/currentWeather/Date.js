@@ -13,6 +13,12 @@ const StyledDate = styled.div`
     margin: 0;
     font-weight: var(--fw-light);
   }
+  @media (min-width: 600px) {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 900px) {
+    grid-column: 1 / 2;
+  }
 `;
 
 export default function Date({ sol, date }) {

@@ -10,6 +10,9 @@ const StyledUnit = styled.div`
     top: 1.5em;
     left: 2em;
   }
+  @media (min-width: 600px) {
+    top: 3em;
+  }
   grid-column: 3 / 4;
   place-self: end;
   display: flex;

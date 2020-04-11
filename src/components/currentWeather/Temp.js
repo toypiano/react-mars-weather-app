@@ -5,6 +5,10 @@ const StyledTemp = styled.div`
   --border: solid 0.25em var(--cl-accent-dark);
   /* Add more space between components with padding! */
   padding: 2em 0;
+  @media (min-width: 600px) {
+    grid-column: 1 / 2;
+    padding: 0;
+  }
   @media (min-width: 900px) {
     grid-column: 2 / 3;
     border-left: var(--border);

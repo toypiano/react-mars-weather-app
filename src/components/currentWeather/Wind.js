@@ -34,6 +34,10 @@ const StyledWind = styled.div`
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
     transition: transform 350ms linear;
   }
+
+  @media (min-width: 600px) {
+    grid-column: 2 / 3;
+  }
   @media (min-width: 900px) {
     grid-column: 3 / 4;
     .section-title,
