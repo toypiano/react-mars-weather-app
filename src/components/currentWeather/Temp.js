@@ -3,10 +3,14 @@ import styled from 'styled-components';
 
 const StyledTemp = styled.div`
   --border: solid 0.25em var(--cl-accent-dark);
-  grid-column: 2 / 3;
-  border-left: var(--border);
-  border-right: var(--border);
-  padding: 0 2em;
+  /* Add more space between components with padding! */
+  padding: 2em 0;
+  @media (min-width: 900px) {
+    grid-column: 2 / 3;
+    border-left: var(--border);
+    border-right: var(--border);
+    padding: 0 2em;
+  }
 `;
 export default function Temp({ maxTemp, minTemp }) {
   return (

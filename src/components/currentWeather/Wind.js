@@ -2,26 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledWind = styled.div`
-  grid-column: 3 / 4;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr;
+  column-gap: 1em;
   .section-title,
   .current-weather__data {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
   align-self: start; /* take content's height */
   grid-template-rows: min-content 1fr; /* remove unwanted space between rows */
-
   .wind__direction {
+    grid-column: 2 / 3;
     grid-row: 1 / span 2;
     background-color: rgba(255, 255, 255, 0.5);
-    --size: 6rem;
+    --size: 4rem;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
     .wind__degree {
       background: var(--cl-accent-dark);
-      --size: 1rem;
+      --size: 0.75rem;
       width: var(--size);
       height: calc(var(--size) * 3);
       --degree: ${(props) => props.degree + 'deg'};
@@ -32,6 +32,20 @@ const StyledWind = styled.div`
     }
     display: grid;
     place-items: center;
+  }
+  @media (min-width: 900px) {
+    grid-column: 3 / 4;
+    .section-title,
+    .current-weather__data {
+      grid-column: 2 / 3;
+    }
+    .wind__direction {
+      grid-row: 1 / span 2;
+      --size: 6rem;
+    }
+    .wind__degree {
+      --size: 1rem;
+    }
   }
 `;
 
