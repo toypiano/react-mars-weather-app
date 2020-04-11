@@ -35,9 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--cl-light);
   line-height: 1.6;
-
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh; /* bg-clip fix */
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -83,4 +81,11 @@ a {
 
 a:hover {
   color: var(--cl-accent-dark);
+}
+
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
