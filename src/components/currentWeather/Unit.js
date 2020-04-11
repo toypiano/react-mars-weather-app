@@ -4,6 +4,12 @@ import { actionTypes } from '../../store/actions';
 import styled from 'styled-components';
 
 const StyledUnit = styled.div`
+  /* You must add this to the top or won't work (only button comes up) */
+  @media (max-width: 899px) {
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+  }
   grid-column: 3 / 4;
   place-self: end;
   display: flex;
