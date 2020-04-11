@@ -10,11 +10,18 @@ import Unit from './Unit';
 const StyledMain = styled.main`
   background: rgba(0, 0, 0, 0.7);
   max-width: 1000px;
-  padding: 2em;
-  margin: 4em 0 0 4em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+  /* space on top for Unit toggle */
+  padding: 6em 2em 2em;
+  margin: 0;
+
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+
+    padding: 2em;
+    margin: 4em 0 0 4em;
+  }
 `;
 
 export default function CurrentWeather({ weather }) {
